@@ -152,11 +152,13 @@ func Geometry(val string, elem *element.OSMElem, match Match) interface{} {
 }
 
 func PseudoArea(val string, elem *element.OSMElem, match Match) interface{} {
-	area := elem.Geom.Geom.Area()
-	if area == 0.0 {
-		return nil
-	}
-	return float32(area)
+    // KOTAIMEN: return 0
+    return nil
+    // area := elem.Geom.Geom.Area()
+    // if area == 0.0 {
+    //     return nil
+    // }
+    // return float32(area)
 }
 
 var wayRanks map[string]int

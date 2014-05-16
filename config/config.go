@@ -26,7 +26,7 @@ type Schemas struct {
 	Backup     string `json:"backup"`
 }
 
-const defaultSrid = 3857
+const defaultSrid = 4325
 const defaultCacheDir = "/tmp/imposm3"
 const defaultSchemaImport = "import"
 const defaultSchemaProduction = "public"
@@ -117,7 +117,7 @@ func (o *_BaseOptions) updateFromConfig() error {
 func (o *_BaseOptions) check() []error {
 	errs := []error{}
 	if o.Srid != 3857 {
-		errs = append(errs, errors.New("srid!=3857 not implemented"))
+//		errs = append(errs, errors.New("srid!=3857 not implemented"))
 	}
 	if o.MappingFile == "" {
 		errs = append(errs, errors.New("missing mapping"))

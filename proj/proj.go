@@ -20,11 +20,11 @@ func MercToWgs(x, y float64) (long, lat float64) {
 }
 
 func NodesToMerc(nodes []element.Node) {
-	for i, nd := range nodes {
-		nodes[i].Long, nodes[i].Lat = WgsToMerc(nd.Long, nd.Lat)
-	}
+    // for i, nd := range nodes {
+    //     nodes[i].Long, nodes[i].Lat = WgsToMerc(nd.Long, nd.Lat)
+    // }
 }
 
 func NodeToMerc(node *element.Node) {
-	node.Long, node.Lat = WgsToMerc(node.Long, node.Lat)
+    // node.Long, node.Lat = WgsToMerc(node.Long, node.Lat)
 }
